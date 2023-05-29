@@ -1,61 +1,56 @@
-const headline1 = document.querySelector('.headline1');
-const female1 = document.querySelector('.female-img');
-const headline2 = document.querySelector('.headline2');
-const subHeadline = document.querySelector('.subHeadline');
-const learnMore_btn = document.querySelector('.learnMore-btn');
+const  headLine_1 = document.querySelector('.headline-1');
+const female = document.querySelector('.female-img');
+const headline_2 = document.querySelector('.headline-2');
+const subHeadLine = document.querySelector('.subHeadline');
+const learMore_btn = document.querySelector('.learMore-btn');
 const logo = document.querySelector('.logo-container');
 const replay = document.querySelector('.replay-btn');
 
 
 
-
 const animation = ()=>{
-
-    headline1.style = 'animation: moveRight 1s forward;';
-    female1.style = 'animation: femaleImg 1s move in & out forward;';
-
+    
+    headLine_1.style = 'animation: slideRight 1s forwards;';
+    female.style = 'animation: femaleImg 1s ease-in-out forwards;';
+    
     setTimeout(()=>{
-        female1.style = 'animation: femaleImg-remove 1s in & out forward;';
+        female.style = 'animation: femaleImg-remove 1s ease-in-out forwards;';
     },2000);
-
     setTimeout(()=>{
-        headline2.style = 'animation: moveRight .5s in & out forward; display:block';
+        headline_2.style = 'animation: slideRight .5s ease-in-out forwards; display:block;';
     },2500);
-
     setTimeout(()=>{
-        headline1.style = 'animation: moveRight-remove .5s forward;';
-        subHeadline.style = 'animation: subHeadline-pop 1s forward; display block;';
+        headLine_1.style = 'animation: slideRight-remove .5s forwards;';
+        subHeadLine.style = 'animation: subHeadShow 1s forwards; display:block;';
     },3000);
-
     setTimeout(()=>{
-        learnMore_btn.style = 'animation: learnMore 1s forward; display block;';
+        learMore_btn.style = 'animation: learnMore 1s forwards; display:block;';
     },4000);
-
     setTimeout(()=>{
-        logo.style = 'animation: logo-pop .5s forward; display block;';
+        logo.style = 'animation: logo-show .5s forwards; display:block;';
     },5000);
-
     setTimeout(()=>{
-        replay.style = 'animation: replay 1s forward; display block;';
-        document.getElementById('replayBtn').innerHTML = '<i class="fa-solid fa-play" onclick="play()"></i>';
+        replay.style = 'animation: replay 1s forwards; display:block;';
+        document.getElementById('playBtn').innerHTML = '<i class="fa-solid fa-play" onclick="play()"></i>';
     },5500);
 }
 
 const play=()=>{
-    document.getElementById('replayBtn').innerHTML = '<i class="fa-solid fa-stop" onclick="stop()"></i>';
-    headline2.style = 'display:none;';
-    subHeadline.style = 'display:none;';
-    learnMore_btn.style = 'display:none;';
+    document.getElementById('playBtn').innerHTML = '<i class="fa-solid fa-stop" onclick="stop()"></i>';
+    headline_2.style = 'display:none;';
+    subHeadLine.style = 'display:none;';
+    learMore_btn.style = 'display:none;';
     logo.style = 'display:none;';
     replay.style = 'display:none;';
 
     animation();
 };
 
+
 const repeat=()=>{
-    headline2.style = 'display:none;';
-    subHeadline.style = 'display:none;';
-    learnMore_btn.style = 'display:none;';
+    headline_2.style = 'display:none;';
+    subHeadLine.style = 'display:none;';
+    learMore_btn.style = 'display:none;';
     logo.style = 'display:none;';
     replay.style = 'display:none;';
 
@@ -63,9 +58,9 @@ const repeat=()=>{
 }
 
 const stop=()=>{
-    document.getElementById('replayBtn').innerHTML = '<i class="fa-solid fa-play" onclick="play()"></i>';
+    document.getElementById('playBtn').innerHTML = '<i class="fa-solid fa-play" onclick="play()"></i>';
 
-    headline2.style = 'display:none;';
+    headline_2.style = 'display:none;';
     subHeadLine.style = 'display:none;';
     learMore_btn.style = 'display:none;';
     logo.style = 'display:none;';

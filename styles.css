@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
+body{
     height: 100vh;
     width: 100%;
     display: flex;
@@ -14,7 +14,7 @@ body {
     overflow: auto;
 }
 
-.container {
+.container{
     background-image: url('assests/images/background.png');
     background-position: center;
     display: flex;
@@ -26,7 +26,7 @@ body {
     position: relative;
 }
 
-.female-img img {
+.female-img img{
     display: none;
     width: 100%;
     display: flex;
@@ -35,11 +35,11 @@ body {
     justify-content: center;
 }
 
-.female-img img {
+.female-img img{
     width: 50%;
 }
 
-.headline1 {
+.headline1{
     width: 100%;
     display: flex;
     align-items: center;
@@ -47,7 +47,7 @@ body {
     transform: translateX(-400px);
 }
 
-@keyframes slideRight-remove {
+@keyframes slideRight-remove{
     0%{
         transform: translateX(0);
     }100%{
@@ -57,7 +57,7 @@ body {
     }
 }
 
-@keyframes slideRight {
+@keyframes slideRight{
     100%{
         transform: translateX(0);
     }
@@ -71,7 +71,7 @@ body {
     }
 }
 
-@keyframes femaleImg-remove {
+@keyframes femaleImg-remove{
     0%{
         opacity: 1;
     }100%{
@@ -80,33 +80,33 @@ body {
     }
 }
 
-.headline1 img {
+.headline1 img{
     width: 80%;
 }
 
-.headline2 {
+.headline2{
     position: absolute;
     top: 150px;
     transform: translateX(500px);
 }
 
-@keyframes slideRight {
+@keyframes slideRight{
     100%{
         transform: translateX(0);
     }
 }
 
-.headline2 img {
+.headline2 img{
     width: 50%;
 }
 
-.logo-container {
+.logo-container{
     position: absolute;
     top: 60px;
     transform: translateX(-150px);
 }
 
-@keyframes logo-slideRight {
+@keyframes logo-slideRight{
     100%{
         transform: translateX(300px);
     }
@@ -130,11 +130,11 @@ body {
     }
 }
 
-.subHeadline img {
+.subHeadline img{
     width: 50%;
 }
 
-.learnMore-btn {
+.learnMore-btn{
     position: absolute;
     bottom: 80px;
     opacity: 0;
@@ -146,20 +146,20 @@ body {
     }
 }
 
-.replay-btn {
+.replay-btn{
     position: absolute;
     bottom: 20px;
     opacity: 0;
     cursor: pointer;
 }
 
-@keyframes replay {
+@keyframes replay{
     100%{
         opacity: 1;
     }
 }
 
-.loading {
+.loading{
     display: flex;
     align-items: center;
     width: 300px;
@@ -167,13 +167,13 @@ body {
     margin-top: 10px
 }
 
-.loading button {
+.loading button{
     margin-right: 5px;
     color: black;
     background-color: transparent;
     border: none;
 }
 
-.loading button i {
+.loading button i{
     cursor: pointer;
 }
