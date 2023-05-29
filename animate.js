@@ -14,28 +14,28 @@ const animation = ()=>{
     headline1.style = 'animation: moveRight 1s forward;';
     female1.style = 'animation: femaleImg 1s move in & out forward;';
 
-    setTransition(()=>{
+    setTimeout(()=>{
         female1.style = 'animation: femaleImg-remove 1s in & out forward;';
     },2000);
 
-    setTransition(()=>{
+    setTimeout(()=>{
         headline2.style = 'animation: moveRight .5s in & out forward; display:block';
     },2500);
 
-    setTransition(()=>{
+    setTimeout(()=>{
         headline1.style = 'animation: moveRight-remove .5s forward;';
         subHeadline.style = 'animation: subHeadline-pop 1s forward; display block;';
     },3000);
 
-    setTransition(()=>{
+    setTimeout(()=>{
         learnMore_btn.style = 'animation: learnMore 1s forward; display block;';
     },4000);
 
-    setTransition(()=>{
+    setTimeout(()=>{
         logo.style = 'animation: logo-pop .5s forward; display block;';
     },5000);
 
-    setTransition(()=>{
+    setTimeout(()=>{
         replay.style = 'animation: replay 1s forward; display block;';
         document.getElementById('replayBtn').innerHTML = '<i class="fa-solid fa-play" onclick="play()"></i>';
     },5500);
