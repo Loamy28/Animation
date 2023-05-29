@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.container {
+    background-image: url('assests/images/background.png');
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 750px;
+    height: 750px;
+    overflow: hidden;
+    position: relative;
+}
+
+.female-img img {
+    display: none;
+    width: 100%;
+    display: flex;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.female-img img {
+    width: 50%;
+}
+
+.headline1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    transform: translateX(-400px);
+}
+
+@keyframes slideRight-remove {
+    0%{
+        transform: translateX(0);
+    }100%{
+        transform: translateY(-100px);
+        width: 0%;
+        display: none;
+    }
+}
+
+@keyframes slideRight {
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes femaleImg {
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+}
+
+@keyframes femaleImg-remove {
+    0%{
+        opacity: 1;
+    }100%{
+        opacity: 0;
+        display: none;
+    }
+}
+
+.headline1 img {
+    width: 80%;
+}
+
+.headline2 {
+    position: absolute;
+    top: 150px;
+    transform: translateX(500px);
+}
+
+@keyframes slideRight {
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.headline2 img {
+    width: 50%;
+}
+
+.logo-container {
+    position: absolute;
+    top: 60px;
+    transform: translateX(-150px);
+}
+
+@keyframes logo-slideRight {
+    100%{
+        transform: translateX(300px);
+    }
+}
+
+.logo-container img {
+    width: 30%;
+}
+
+.subHeadline {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 220px;
+    transform: translateX(200px);
+}
+
+@keyframes subHeadline-pop{
+    100%{
+        opacity: 1;
+    }
+}
+
+.subHeadline img {
+    width: 50%;
+}
+
+.learnMore-btn {
+    position: absolute;
+    bottom: 80px;
+    opacity: 0;
+}
+
+@keyframes learnMore-pop{
+    100%{
+        opacity: 1;
+    }
+}
+
+.replay-btn {
+    position: absolute;
+    bottom: 20px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+@keyframes replay {
+    100%{
+        opacity: 1;
+    }
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 15px;
+    margin-top: 10px
+}
+
+.loading button {
+    margin-right: 5px;
+    color: black;
+    background-color: transparent;
+    border: none;
+}
+
+.loading button i {
+    cursor: pointer;
+}
