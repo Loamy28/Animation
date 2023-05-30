@@ -1,7 +1,6 @@
-* {
+*{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
 body{
@@ -15,82 +14,86 @@ body{
 }
 
 .container{
-    background-image: url('assests/images/background.png');
-    background-position: center;
+    background-image: url(assests/images/background.png);
+    /* background-position: center; */
+    background-size: cover;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    width: 750px;
-    height: 750px;
     overflow: hidden;
     position: relative;
 }
 
-.female-img img{
-    display: none;
+.female{
     width: 100%;
     display: flex;
     opacity: 0;
+    top: 50px;
     align-items: center;
-    justify-content: center;
+    justify-content: center;  
 }
 
-.female-img img{
-    width: 50%;
+.female img{
+    width: 80%;
 }
 
-.headline1{
+.headline{
     width: 100%;
     display: flex;
+    margin-top: -500px;
     align-items: center;
-    margin-top: 20px;
-    transform: translateX(-400px);
+    transform: translateX(-500px);
 }
 
-@keyframes slideRight-remove{
+@keyframes headline-fromLeft-vanish{
     0%{
         transform: translateX(0);
-    }100%{
-        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(100px);
         width: 0%;
         display: none;
     }
 }
 
-@keyframes slideRight{
+@keyframes headline-fromLeft{
     100%{
         transform: translateX(0);
     }
 }
 
-@keyframes femaleImg {
+@keyframes female{
     0%{
         opacity: 0;
-    }100%{
+    }
+    100%{
         opacity: 1;
     }
 }
 
-@keyframes femaleImg-remove{
+@keyframes female-vanish{
     0%{
         opacity: 1;
-    }100%{
+    }
+    100%{
         opacity: 0;
-        display: none;
+        /* display: none; */
     }
 }
 
-.headline1 img{
-    width: 80%;
+.headline img{
+    width: 50%;
 }
 
 .headline2{
+    opacity: 1;
     position: absolute;
-    top: 150px;
-    transform: translateX(500px);
+    top: -100px;
+    transform: translateX(1500px);
 }
 
-@keyframes slideRight{
+@keyframes headline2-fromLeft{
     100%{
         transform: translateX(0);
     }
@@ -100,47 +103,48 @@ body{
     width: 50%;
 }
 
-.logo-container{
+.logo{
     position: absolute;
-    top: 60px;
-    transform: translateX(-150px);
+    top: -60px;
+    transform: translateX(-850px);
 }
 
-@keyframes logo-slideRight{
+@keyframes logo-out{
     100%{
-        transform: translateX(300px);
+        transform: translateX(850px);
     }
 }
 
-.logo-container img {
+.logo img{
     width: 30%;
 }
 
-.subHeadline {
+.subHead{
     position: absolute;
+    top: 50px;
     opacity: 0;
-    right: 0;
-    top: 220px;
-    transform: translateX(200px);
+    transform: translateX(150px);
 }
 
-@keyframes subHeadline-pop{
+@keyframes subHead-show{
     100%{
         opacity: 1;
     }
 }
 
-.subHeadline img{
+.subHead img{
+    width: 80%;
+}
+
+.learnMore{
     width: 50%;
-}
-
-.learnMore-btn{
     position: absolute;
-    bottom: 80px;
+    top: 750px;
     opacity: 0;
+    left: 500px;
 }
 
-@keyframes learnMore-pop{
+@keyframes learnMore-show{
     100%{
         opacity: 1;
     }
@@ -148,7 +152,7 @@ body{
 
 .replay-btn{
     position: absolute;
-    bottom: 20px;
+    top: 850px;
     opacity: 0;
     cursor: pointer;
 }
