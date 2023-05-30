@@ -6,67 +6,73 @@ const learnMore = document.querySelector('.learnMore');
 const logo = document.querySelector('.logo');
 const replay = document.querySelector('.replay-btn');
 
+const animation = () => {
+  headLine.style.animation = 'headline-fromLeft 1s forwards';
+  female.style.animation = 'female 1s ease-in-out forwards';
 
+  setTimeout(() => {
+    female.style.animation = 'female-vanish 1s ease-out forwards';
+  }, 2000);
 
-const animation = ()=>{
-    
-    headLine.style = 'animation: headline-fromLeft 1s forwards;';
-    female.style = 'animation: female 1s ease-in-out forwards;';
-    
-    setTimeout(()=>{
-        female.style = 'animation: female-vanish 1s ease-in-out forwards;';
-    },2000);
+  setTimeout(() => {
+    headline2.style.animation = 'headline2-fromLeft 1s ease-in-out forwards';
+    headline2.style.display = 'block';
+  }, 2500);
 
-    setTimeout(()=>{
-        headline2.style = 'animation: headline2-fromLeft 1s ease-in-out forwards; display:block;';
-    },2500);
+  setTimeout(() => {
+    headLine.style.animation = 'headline-fromLeft-vanish 1s forwards';
+    subHead.style.animation = 'subHead-show 1s forwards';
+    subHead.style.display = 'block';
+  }, 3500);
 
-    setTimeout(()=>{
-        headLine.style = 'animation: headline-fromLeft-vanish 1s forwards;';
-        subHead.style = 'animation: subHead-show 1s forwards; display:block;';
-    },3500);
+  setTimeout(() => {
+    learnMore.style.animation = 'learnMore-show 1s forwards';
+    learnMore.style.display = 'block';
+  }, 4000);
 
-    setTimeout(()=>{
-        learnMore.style = 'animation: learnMore-show 1s forwards; display:block;';
-    },4000);
+  setTimeout(() => {
+    logo.style.animation = 'logo-out 1s forwards';
+    logo.style.display = 'block';
+  }, 5000);
 
-    setTimeout(()=>{
-        logo.style = 'animation: logo-out 1s forwards; display:block;';
-    },5000);
-
-    setTimeout(()=>{
-        replay.style = 'animation: replay 1s forwards; display:block;';
-        document.getElementById('playBtn').innerHTML = '<i class="fa-solid fa-play" onclick="play()"></i>';
-    },5500);
-}
-
-const play=()=>{
-    document.getElementById('playBtn').innerHTML = '<i class="fa-solid fa-stop" onclick="stop()"></i>';
-    headline2.style = 'display:none;';
-    subHead.style = 'display:none;';
-    learnMore.style = 'display:none;';
-    logo.style = 'display:none;';
-    replay.style = 'display:none;';
-
-    animation();
+  setTimeout(() => {
+    replay.style.animation = 'replay 1s forwards';
+    replay.style.display = 'block';
+    document.getElementById('playBtn').innerHTML =
+      '<i class="fa-solid fa-play" onclick="play()"></i>';
+  }, 5500);
 };
 
+const play = () => {
+  document.getElementById('playBtn').innerHTML =
+    '<i class="fa-solid fa-stop" onclick="stop()"></i>';
+  headline2.style.display = 'none';
+  subHead.style.display = 'none';
+  learnMore.style.display = 'none';
+  logo.style.display = 'none';
+  replay.style.display = 'none';
 
-const repeat=()=>{
-    headline2.style = 'display:none;';
-    subHead.style = 'display:none;';
-    learnMore.style = 'display:none;';
-    logo.style = 'display:none;';
-    replay.style = 'display:none;';
+  animation();
+};
 
-    play();
-}
+const repeat = () => {
+  headline2.style.display = 'none';
+  subHead.style.display = 'none';
+  learnMore.style.display = 'none';
+  logo.style.display = 'none';
+  replay.style.display = 'none';
 
-const stop=()=>{
-    document.getElementById('playBtn').innerHTML = '<i class="fa-solid fa-play" onclick="play()"></i>';
-    headline2.style = 'display:none;';
-    subHead.style = 'display:none;';
-    learnMore.style = 'display:none;';
-    logo.style = 'display:none;';
-    replay.style = 'display:none;';
-}
+  play();
+};
+
+const stop = () => {
+  document.getElementById('playBtn').innerHTML =
+    '<i class="fa-solid fa-play" onclick="play()"></i>';
+  headline2.style.display = 'none';
+  subHead.style.display = 'none';
+  learnMore.style.display = 'none';
+  logo.style.display = 'none';
+  replay.style.display = 'none';
+};
+
+window.addEventListener('load', animation);
